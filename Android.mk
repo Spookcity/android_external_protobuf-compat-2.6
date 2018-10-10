@@ -16,7 +16,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-IGNORED_WARNINGS := -Wno-sign-compare -Wno-unused-parameter -Wno-sign-promo -Wno-error=return-type
+IGNORED_WARNINGS := -Wno-error -Wno-sign-compare -Wno-unused-parameter -Wno-sign-promo -Wno-error=return-type
 
 CC_LITE_SRC_FILES := \
     src/google/protobuf/stubs/atomicops_internals_x86_gcc.cc         \
@@ -66,6 +66,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := libprotobuf-cpp-fl26
 LOCAL_MODULE_TAGS := optional
+
 LOCAL_CPP_EXTENSION := .cc
 LOCAL_SRC_FILES := $(protobuf_cc_full_src_files)
 LOCAL_C_INCLUDES := \
